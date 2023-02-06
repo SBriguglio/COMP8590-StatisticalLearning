@@ -1,0 +1,143 @@
+Auto <- read.csv("Auto.data", na.strings = "?", stringsAsFactors = T)
+View(Auto)
+plot(Auto$horsepower, Auto$mpg)
+Auto = na.omit(Auto)
+names(Auto)
+attach(Auto)
+Auto <- read.table("Auto.data", header = T, na.strings = "?", stringsAsFactors = TRUE)
+Auto = na.omit(Auto)
+plot(Auto$horsepower, Auto$mpg)
+identify(Auto$horsepower, Auto$mpg)
+identify(Auto$horsepower, Auto$mpg, name)
+identify(Auto$horsepower, Auto$mpg, Auto$name)
+summary(Auto)
+q()
+x <- c(1, 3, 2, 5)
+x
+x <= c(1, 6, 2)
+x <- c(1, 6, 2)
+x
+y = c(1, 4, 3)
+y
+length(x)
+length(y)
+x + y
+ls()
+rm(list = ls())
+ls
+ls()
+?matrix
+x <- matrix(data = c(1, 2, 3, 4), nrow = 2, ncol = 2)
+x
+x <- matrix(c(1, 2, 3, 4), 2, 2)
+x
+x <- matrix(c(1, 2, 3, 4), 2, 2, byrow = T)
+x
+sqrt(x)
+x^2
+x <- rnorm(50)
+x
+y <- x + rnorm(50, mean = 50, sd = 0.1)
+cor(x, y)
+set.seed(1303)
+rnorm(50)
+set.seed(3)
+y <- rnorm(100)
+mean(y)
+var(y)
+sqrt(var(y))
+sd(y)
+ls()
+rm(x, y)
+ls()
+x = 1
+y = 2
+ls
+x = 1
+y = 2
+ls()
+rm(list = ls())
+ls()
+clear()
+x <- rnorm(100)
+y <- rnorm(100)
+plot(x,y)
+plot(x,y, xlab = "x-Axis", y-lab = "y-Axis", main = "Title")
+plot(x,y, xlab = "x-Axis", ylab = "y-Axis", main = "Title")
+x <- rnorm(100)
+y <- rnorm(100)
+plot(x,y)
+plot(x,y, xlab = "x-Axis", ylab = "y-Axis", main = "Title")
+pdf("Figure1.pdf")
+plot(x, y, col = "green")
+dev.off()
+x <- seq(1, 10)
+x
+x <- 1:10
+x
+x <- seq(-pi, pi, length=50)
+x
+y <- x
+f <- outer(x, y, function(x, y) cos(y)/(1+x^2))
+contour(x, y, f)
+contour(x, y, f, levels = 45, add = T)
+contour(x, y, f, nlevels = 45, add = T)
+y <- x
+f <- outer(x, y, function(x, y) cos(y)/(1+x^2))
+contour(x, y, f)
+contour(x, y, f, nlevels = 45, add = T)
+contour(x, y, f)
+fa <- (f - t(f)) / 2
+image(x, y, fa)
+persp(x, y, fa)
+persp(x, y, fa, theta = 30)
+persp(x, y, fa, theta = 30, phi = 20)
+persp(x, y, fa, theta = 30, phi = 70)
+persp(x, y, fa, theta = 30, phi = 40)
+A <- matrix(1:16, 4, 4)
+A
+A[2, 3]
+A[c(1,3), c(2, 4)]
+A[1:3, 2:4]
+A[1:2, ]
+A[, 1:2]
+A[1, ]
+A[-c(1, 3), ]
+A
+dim(A)
+Auto <- read.table("Auto.data")
+View(Auto)
+head(Auto)
+Auto <- read.table("Auto.data")
+head(Auto)
+View(Auto)
+Auto <- read.csv("Auto.csv", na.strings = "?", stringsAsFactors = T, header = T)
+dim(Auto)
+Auto <- na.omit(Auto)
+dim(Auto)
+names(Auto)
+plot(Auto$cylinders, Auto$mpg)
+attach(Auto)
+plot(cylinders, mpg)
+cylinders <- as.factor(cylinders)
+plot(cylinders, mpg, col= "red", varwidth = T)
+plot(cylinders, mpg, col= "red", varwidth = T, horizontal = T)
+plot(cylinders, mpg, col= "red", varwidth = T, xlab = "cylinders", ylab = "mpg")
+hist(mpg)
+hist(mpg, col = 2)
+hist(mpg, col = 2, breaks = 15)
+pairs(Auto)
+pairs(
+~ mpg + displacement + horsepower + weight + acceleration + data = auto
+pairs(
+~ mpg + displacement + horsepower + weight + acceleration, data = auto
+)
+pairs(Auto)
+pairs(
+~ mpg + displacement + horsepower + weight + acceleration, data = Auto
+)
+plot(horsepower, mpg)
+identify(horsepower, mpg, name)
+summary(Auto)
+summary(mpg)
+savehistory(file = "history_1.txt")
